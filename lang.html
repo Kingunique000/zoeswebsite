@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoë's Castle</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <style>
+        html, body { height: 100%;}
+        body > footer {
+        position: sticky;
+        top: 100vh;
+    }
+        body {
+            background-color: #c7d6c1;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #2e3b30;
+            height: 10px;
+            padding: 90px;
+            color: #fff;
+            /* Text color for the header */
+            text-align: center;
+            padding: 20px;
+            /* Adjust padding as needed */
+            font-family: 'great vibes', cursive;
+        }
+
+        footer {
+            background-color: #2e3b30;
+            color: #ffffff; /* Text color for footer */
+            padding: 10px;
+            height: 30px;
+        }
+
+
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            /* Allow main to grow to take up remaining space */
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            /* Adjust margin between image rows */
+        }
+
+        .image-container img {
+            max-width: 275px;
+            /* Adjust the max width of each image */
+            max-height: 210px;
+            /* Adjust the max height of each image */
+            margin: 50px;
+            /* Adjust the margin between images */
+        }
+        main img {
+            max-width: 100%; /* Set the maximum width of the image to 100% of its container */
+            height: 700px; /* Maintain the aspect ratio of the image */
+        }
+        /* Style for the butterfly button */
+        .butterfly-btn {
+            width: 140px;
+            height: 120px;
+            border: none;
+            cursor: pointer;
+            position: absolute; /* Set the position to absolute */
+        }
+
+        .butterfly-btn1 {
+            top: 680px; /* Adjust the top position as needed */
+            left: -595px; /* Adjust the left position as needed */
+            animation: fadeButterfly1 7s infinite cubic-bezier(0.4, 0.0, 0.2, 1); /* Cubic bezier for a smoother transition */
+        }
+
+        .butterfly-btn2 {
+            top: 600px; /* Adjust the top position as needed */
+            left: 130px; /* Adjust the left position as needed */
+            animation: fadeButterfly2 8s infinite cubic-bezier(0.4, 0.0, 0.2, 1); /* Cubic bezier for a smoother transition */
+        }
+        .butterfly-btn3 {
+            top: 800px; /* Adjust the top position as needed */
+            right: 1000px; /* Adjust the left position as needed */
+            animation: fadeButterfly3 7s infinite cubic-bezier(0.4, 0.0, 0.2, 1); /* Cubic bezier for a smoother transition */
+        }
+        .butterfly-btn4 {
+            top: 370px; /* Adjust the top position as needed */
+            right: 110px; /* Adjust the left position as needed */
+            animation: fadeButterfly4 8s infinite cubic-bezier(0.4, 0.0, 0.2, 1); /* Cubic bezier for a smoother transition */
+        }
+
+        @keyframes fadeButterfly1 {
+            0%, 100% {
+                background: url('images/wingsopentilt.png') no-repeat;
+                background-size: contain;
+            }
+            50% {
+                background: url('images/wingsclosedtilt.png') no-repeat;
+                background-size: contain;
+            }
+        }
+
+        @keyframes fadeButterfly2 {
+            0%, 100% {
+                background: url('images/wingsopentiltdark.png') no-repeat;
+                background-size: contain;
+            }
+            50% {
+                background: url('images/wingsclosedtiltdark.png') no-repeat;
+                background-size: contain;
+            }
+        }
+        @keyframes fadeButterfly3 {
+            0%, 100% {
+                background: url('images/wingsopentiltleft.png') no-repeat;
+                background-size: contain;
+            }
+            50% {
+                background: url('images/wingsclosedtiltleft.png') no-repeat;
+                background-size: contain;
+            }
+        }
+        @keyframes fadeButterfly4 {
+            0%, 100% {
+                background: url('images/wingsopentiltleftdark.png') no-repeat;
+                background-size: contain;
+            }
+            50% {
+                background: url('images/wingsclosedtiltleftdark.png') no-repeat;
+                background-size: contain;
+            }
+        }
+
+
+        /* Style for the tooltip */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #123524;
+            color: #ffffff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1></h1>
+    </header>
+    <main>
+        <img src="images/mainlang.png" alt="Description of your image"></img>
+        <a href="index.html">
+            <div class="tooltip">
+                <button class="butterfly-btn butterfly-btn3" title="Click to Return Home"></button>
+            </div>
+        </a>
+        <a href="index.html">
+            <div class="tooltip">
+                <button class="butterfly-btn butterfly-btn2" title="Click to Return Home"></button>
+            </div>
+        </a>
+        <a href="index.html">
+            <div class="tooltip">
+                <button class="butterfly-btn butterfly-btn4" title="Click to Return Home"></button>
+            </div>
+        </a>
+        <a href="index.html">
+            <div class="tooltip">
+                <button class="butterfly-btn butterfly-btn1" title="Click to Return Home"></button>
+            </div>
+        </a>
+    </main>
+    <main>
+        <div class="image-container">
+            <a href="PDFs/AoS.pdf" target="_blank" rel="noopener noreferrer">
+            <img src="images/AoS.png" alt="Image 1">
+            </a>
+            <a href="PDFs/AoS.pdf" target="_blank" rel="noopener noreferrer">
+            <img src="images/QT.png" alt="Image 2">
+            </a>
+            <a href="PDFs/AoS.pdf" target="_blank" rel="noopener noreferrer">
+            <img src="images/PT.png" alt="Image 3">
+            </a>
+            <a href="PDFs/AoS.pdf" target="_blank" rel="noopener noreferrer">
+            <img src="images/WoA.png" alt="Image 4">
+            </a>
+            <a href="PDFs/AoS.pdf" target="_blank" rel="noopener noreferrer">
+            <img src="images/GG.png" alt="Image 5">
+            </a>
+        </div>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+
+</html>
